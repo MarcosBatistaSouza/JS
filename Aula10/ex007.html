@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <input type="number" name="op1" id="op1"> x
+    <input type="number" name="op2" id="op2">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="resmult"></div>
+
+    <input type="button" value="Fusão" onclick="fusao()">
+    <script>
+        function somar(){
+        var tn1= window.document.getElementById('txtn1')
+        var tn2= window.document.getElementById('txtn2')
+        var res= window.document.getElementById('res')
+        n1 = Number(tn1.value)
+        n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+
+        function multiplicar(){
+            var op1 = document.getElementById('op1')
+            var op2 = document.getElementById('op2')
+            var result = document.getElementById('resmult')
+            n1 = Number(op1.value)
+            n2 = Number(op2.value)
+            var m = n1 * n2
+            resmult.innerHTML = `A multiplcação entre ${n1} e ${n2} é igual á ${m}`
+        }
+    </script>
+</body>
+</html>
